@@ -1,6 +1,9 @@
 package com.Test;
 
 import java.io.File;
+
+import javax.sound.midi.Synthesizer;
+
 //hello word
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -21,14 +24,16 @@ import org.apache.lucene.document.TextField;
 
 public class LuceneDemo {
 	
-	public static void main(String[] args) {
+	public static   void main(String[] args) {
 		   try{  
+			   
 			   //全文搜索水电费
 	        	Directory directory=FSDirectory.open(new File("C:/index3"));  
 	              IndexWriterConfig config=new IndexWriterConfig(Version.LUCENE_CURRENT,new StandardAnalyzer());
 	            		  IndexWriter writer = new IndexWriter(directory,config);
 	              
 	            //����8���ĵ�  
+	            		  //创建文档对象
 	            Document doc1 = new Document();  
 	            Document doc2 = new Document();  
 	            Document doc3 = new Document();  
