@@ -60,13 +60,15 @@ public class LuceneDemo {
 //					 //��Ҫ��������ݱ�����Query�У���text�ǽ�Ҫ��ѯ�Ĺؼ��ʡ���
 				  Query query = parser.parse("��");
 				  //����Searcher��������TopDocsȻ���ȡScoreDoc�������������query�Ĳ�ѯ�ؼ��ʣ���  
-		          ScoreDoc[] hits = isearcher.search(query, null, 1000).scoreDocs;			 
+		          ScoreDoc[] hits = isearcher.search(query, null, 1000).scoreDocs;		
+			   if(hits!=null){
 				  //ѭ��ȡ��Searcher�����е�ֵ������ʱ��ѯ�����Ľ������
 				  for (int i = 0; i < hits.length; i++) {
 					    //����ScoreDoc��ȡ����Document���󲢵õ�����Ҫ��ֵ  
 		                Document hitDoc = isearcher.doc(hits[i].doc);
 		             System.out.println("��ѯ������ֵ��:  "+hitDoc.get("bookname"));
 		            }
+			   }
 	        }catch(Exception e){  
 	            System.out.println(e.getStackTrace());  
 	        }  
