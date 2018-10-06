@@ -33,7 +33,7 @@ public class LuceneDemo {
 	            		  IndexWriter writer = new IndexWriter(directory,config);
 	              
 	            //����8���ĵ�  
-	            		  //创建文档对象
+	            		  //创建文档对象 
 	            Document doc1 = new Document();  
 	            Document doc2 = new Document();  
 	            Document doc3 = new Document();  
