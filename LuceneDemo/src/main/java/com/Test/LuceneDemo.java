@@ -23,7 +23,7 @@ public class LuceneDemo {
 	
 	public static void main(String[] args) {
 		   try{  
-			   //全文搜索
+			   //全文搜索 
 	        	Directory directory=FSDirectory.open(new File("C:/index3"));  
 	              IndexWriterConfig config=new IndexWriterConfig(Version.LUCENE_CURRENT,new StandardAnalyzer());
 	            		  IndexWriter writer = new IndexWriter(directory,config);
