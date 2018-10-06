@@ -36,68 +36,68 @@ import org.apache.lucene.search.TopDocs;
 public class LuceneTest {
 	
 	public static void main(String[] args) {
-//		//-------½«ÐèÒª²éÑ¯µÄÊý¾ÝÐ´ÈëÔÚÄÚ´æÖ®ÖÐ£¨Ë÷Òý£©---------
+//		//-------ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ö®ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½---------
 //		
-//		/*Ò»£¬¶¨ÒåÒ»¸ö´Ê·¨·ÖÎöÆ÷£¨±ÈÈçÒ»¾ä»°£¬¡°ÎÒ°®ÎÒÃÇµÄÖÐ¹ú£¡¡±£¬ÈçºÎ¶ÔËû²ð·Ö£¬¿ÛµôÍ£¶Ù´Ê¡°µÄ¡±
-//		 * ÌáÈ¡¹Ø¼ü×Ö¡°ÎÒ¡±¡°ÎÒÃÇ¡±¡°ÖÐ¹ú¡±µÈµÈ¡£Õâ¾ÍÒª½èÖúµÄ´Ê·¨·ÖÎöÆ÷AnalyzerÀ´ÊµÏÖ¡££©
+//		/*Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ä»°ï¿½ï¿½ï¿½ï¿½ï¿½Ò°ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¶ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½Ûµï¿½Í£ï¿½Ù´Ê¡ï¿½ï¿½Ä¡ï¿½
+//		 * ï¿½ï¿½È¡ï¿½Ø¼ï¿½ï¿½Ö¡ï¿½ï¿½Ò¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¡ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ÈµÈ¡ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ä´Ê·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Analyzerï¿½ï¿½Êµï¿½Ö¡ï¿½ï¿½ï¿½
 //		*/
 //		Analyzer analyzer =new StandardAnalyzer();
-//		//¶þ¡¢´æ´¢·½Ê½ÓÐÁ½ÖÖ
-//		//1£©¡¢±¾µØÎÄ¼þ´æ´¢£ºpath£ºÎÄ¼þµÄÂ·¾¶
+//		//ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		//1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½æ´¢ï¿½ï¿½pathï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½
 //		//Directory directory = FSDirectory.open(new File("F:\\luceneIndex"));
-//		//2)ÄÚ´æ´æ´¢
+//		//2)ï¿½Ú´ï¿½æ´¢
 //		Directory directory = new RAMDirectory();
-//		//Èý¡¢´´½¨Ë÷ÒýÎÄ¼þÐ´Èë
+//		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Ð´ï¿½ï¿½
 //		/*
-//		 * new IndexWriterConfigÊÇ¶ÔIndexWriter½øÐÐÅäÖÃ£¬
-//		 * ÓÐÁ½¸ö²ÎÊý£¬µÚÒ»¸ö²ÎÊýÊÇµ±Ç°µÄ°æ±¾ºÅ£¬
-//		 *         µÚ¶þ¸ö²ÎÊýÊÇ´Ê·¨·ÖÎöÆ÷
+//		 * new IndexWriterConfigï¿½Ç¶ï¿½IndexWriterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½
+//		 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½Ç°ï¿½Ä°æ±¾ï¿½Å£ï¿½
+//		 *         ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´Ê·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //		 * */
 //		IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_CURRENT, analyzer);
 //		try {
-//			//new IndexWriterÓÐÁ½¸ö²ÎÊý£¬
-//			//µÚÒ»¸ö²ÎÊýÊÇÄÚ´æµÄ´¢´æ£¬µÚ¶þ¸öÊÇIndexWriterConfig¶ÔIndexWriterµÄÅäÖÃ¡£
+//			//new IndexWriterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//			//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ä´ï¿½ï¿½æ£¬ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½IndexWriterConfigï¿½ï¿½IndexWriterï¿½ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½
 //			IndexWriter iwriter = new IndexWriter(directory, config);
-//			//´´½¨documentÎÄµµ¶ÔÏó£¬ÀàËÆÓÚÊý¾Ý¿âÖÐµÄÒ»ÐÐ±í¡£ÀûÓÃ¸Ã¶ÔÏó½«Òª²éÑ¯µÄÊý¾Ý±£´æÔÚÄÚ´æÖÐ£¬
+//			//ï¿½ï¿½ï¿½ï¿½documentï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ðµï¿½Ò»ï¿½Ð±ï¿½ï¿½ï¿½ï¿½Ã¸Ã¶ï¿½ï¿½ï¿½Òªï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½Ð£ï¿½
 //			 Document doc = new Document();
-//			 //¶¨ÒåÒª²éÑ¯µÄÊý¾Ý£¬Èç¹ûÊý¾ÝÓÐ¶àÌõ½«Êý¾ÝÆ´½Ó³ÉÒ»¸ö×Ö·û´®´«¹ýÈ¥¡£
-//			   String text1="ÄãºÃ£¬ÎÒÊÇ³ÂÁÕ";
+//			 //ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½Ó³ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½
+//			   String text1="ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½";
 //			   String text2="index";
-//			   String text3 = "ÄãºÃ£¬ÎÒÊÇ³Â¾ü";
-//			  /*½«Êý¾Ý×Ö·ûÌí¼Óµ½ÎÄµµÖÐ£¬ 
-//			   * fieldname:Êý¾ÝµÄÃû³Æ£¬ÀàËÆÓÚ±íÃû
-//			   * TextField.TYPE_STORED£º
+//			   String text3 = "ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ç³Â¾ï¿½";
+//			  /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Óµï¿½ï¿½Äµï¿½ï¿½Ð£ï¿½ 
+//			   * fieldname:ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½
+//			   * TextField.TYPE_STOREDï¿½ï¿½
 //			   */
 //			   doc.add(new TextField("text", text1, Store.YES));
 //			   doc.add(new TextField("text", text2, Store.YES));
 //			   doc.add(new TextField("text", text3, Store.YES));
-//			  //½«ÎÄµµ±£´æÔÚÄÚ´æÖÐ¡£
+//			  //ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½Ð¡ï¿½
 //			  iwriter.addDocument(doc);
 //			  iwriter.close();
 //			  
-//			  //-----------½øÈë²éÑ¯--------------
-//			  //Ò»¡¢´ò¿ª´¢´æÎ»ÖÃ
+//			  //-----------ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯--------------
+//			  //Ò»ï¿½ï¿½ï¿½ò¿ª´ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 //			  DirectoryReader ireader = DirectoryReader.open(directory);
-//			  //¶þ¡¢´´½¨ËÑËØÆ÷
+//			  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //			  IndexSearcher isearcher = new IndexSearcher(ireader);
-//			  //Èý¡¢ÀàËÆÓÚsqlÓï¾ä£¬½øÐÐ¹Ø¼ü´Ê²éÑ¯
+//			  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½ä£¬ï¿½ï¿½ï¿½Ð¹Ø¼ï¿½ï¿½Ê²ï¿½Ñ¯
 //			  /*
-//			   * new QueryParser´´½¨²éÑ¯¶ÔÏóÓÐÈý¸ö²ÎÊý
-//			   * µÚÒ»¸ö²ÎÊý£¬µ±Ç°°æ±¾ºÅ
-//			   * µÚ¶þ¸ö²ÎÊý£º²éÑ¯µÄÎÄ¼þµÄÃû³Æ£¨ÀàËÆÓÚ²éÑ¯µÄ±íÃû£©
-//			   * µÚÈý¸ö²ÎÊý£ºÉèÖÃ´Ê·¨·ÖÎöÆ÷
+//			   * new QueryParserï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//			   * ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½æ±¾ï¿½ï¿½
+//			   * ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½Ñ¯ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½
+//			   * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´Ê·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //			   * */
 //			  QueryParser parser = new QueryParser(Version.LUCENE_CURRENT, "text", analyzer);
-//			 //½«ÒªÊäÈëµÄÄÚÈÝ±£´æÔÚQueryÖÐ£¬£¨textÊÇ½«Òª²éÑ¯µÄ¹Ø¼ü´Ê¡££©
+//			 //ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½ï¿½ï¿½Queryï¿½Ð£ï¿½ï¿½ï¿½textï¿½Ç½ï¿½Òªï¿½ï¿½Ñ¯ï¿½Ä¹Ø¼ï¿½ï¿½Ê¡ï¿½ï¿½ï¿½
 //			  Query query = parser.parse("index");
-//			  //¸ù¾ÝSearcherËÑË÷·µ»ØTopDocsÈ»ºó»ñÈ¡ScoreDoc£¨ÀïÃæ²ÎÊý´«ÈëqueryµÄ²éÑ¯¹Ø¼ü´Ê£¬£©  
+//			  //ï¿½ï¿½ï¿½ï¿½Searcherï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½TopDocsÈ»ï¿½ï¿½ï¿½È¡ScoreDocï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½queryï¿½Ä²ï¿½Ñ¯ï¿½Ø¼ï¿½ï¿½Ê£ï¿½ï¿½ï¿½  
 //	          ScoreDoc[] hits = isearcher.search(query, null, 1000).scoreDocs;
 		 
-//			  //Ñ­»·È¡³öSearcherÊý×éÖÐµÄÖµ£¬£¨¼°Ê±²éÑ¯³öÀ´µÄ½á¹û¡££©
+//			  //Ñ­ï¿½ï¿½È¡ï¿½ï¿½Searcherï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //			  for (int i = 0; i < hits.length; i++) {
-//				    //¸ù¾ÝScoreDoc»ñÈ¡¾ßÌåDocument¶ÔÏó²¢µÃµ½ËùÐèÒªµÄÖµ  
+//				    //ï¿½ï¿½ï¿½ï¿½ScoreDocï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Documentï¿½ï¿½ï¿½ó²¢µÃµï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Öµ  
 //	                Document hitDoc = isearcher.doc(hits[i].doc);
-//	             System.out.println("²éÑ¯³öÀ´µÄÖµÊÇ:  "+hitDoc.get("text"));
+//	             System.out.println("ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½:  "+hitDoc.get("text"));
 //	            }
 //		} catch (Exception e) {
 //			e.printStackTrace();
@@ -110,22 +110,22 @@ public class LuceneTest {
 	        // TODO Auto-generated method stub  
 	  
 	        try{  
-	        	Directory directory=FSDirectory.open(new File("D:\\index3"));
+	        	Directory directory=FSDirectory.open(new File("D:\\index5444"));
 	              IndexWriterConfig config=new IndexWriterConfig(Version.LUCENE_CURRENT,new StandardAnalyzer());
 	            		  IndexWriter writer = new IndexWriter(directory,config);
 	              
-	            //´´½¨8¸öÎÄµµ  
+	            //ï¿½ï¿½ï¿½ï¿½8ï¿½ï¿½ï¿½Äµï¿½  
 	            Document doc1 = new Document();  
 	            Document doc2 = new Document();  
 	            Document doc3 = new Document();  
 	            Document doc4 = new Document();  
 	            Document doc5 = new Document();  
 	     
-	            doc1.add(new TextField("bookname", "¸ÖÌúÊÇÔõÑùÁ¶³ÉµÄ",Store.YES));  
-	            doc2.add(new TextField("bookname", "Ó¢ÐÛ¶ùÅ®",Store.YES));  
-	            doc3.add(new TextField("bookname", "¸¡ÉúÁù¼Ç",Store.YES));  
-	            doc4.add(new TextField("bookname", "Ì«Æ½¹ã¼Ç",Store.YES));  
-	            doc5.add(new TextField("bookname", "ÎÄ»¯¿àÂÃ",Store.YES));  
+	            doc1.add(new TextField("bookname", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½",Store.YES));  
+	            doc2.add(new TextField("bookname", "Ó¢ï¿½Û¶ï¿½Å®",Store.YES));  
+	            doc3.add(new TextField("bookname", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",Store.YES));  
+	            doc4.add(new TextField("bookname", "Ì«Æ½ï¿½ï¿½ï¿½",Store.YES));  
+	            doc5.add(new TextField("bookname", "ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½",Store.YES));  
 	          
 	              
 	            writer.addDocument(doc1);  
@@ -135,23 +135,23 @@ public class LuceneTest {
 	            writer.addDocument(doc5);  
 	       
 	            writer.close();  
-	              
-	            System.out.println("´´½¨Ë÷Òý³É¹¦");  
-	            //Ò»¡¢´ò¿ª´¢´æÎ»ÖÃ
+	            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sdfï¿½ï¿½É¹ï¿½");  
+	            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½");  
+	            //Ò»ï¿½ï¿½ï¿½ò¿ª´ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 	            Analyzer analyzer=new StandardAnalyzer();
 				  DirectoryReader ireader = DirectoryReader.open(directory);
-//				  //¶þ¡¢´´½¨ËÑËØÆ÷
+//				  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				  IndexSearcher isearcher = new IndexSearcher(ireader);
 				  QueryParser parser = new QueryParser(Version.LUCENE_CURRENT, "bookname", analyzer);
-//					 //½«ÒªÊäÈëµÄÄÚÈÝ±£´æÔÚQueryÖÐ£¬£¨textÊÇ½«Òª²éÑ¯µÄ¹Ø¼ü´Ê¡££©
-				  Query query = parser.parse("ÎÄ");
-				  //¸ù¾ÝSearcherËÑË÷·µ»ØTopDocsÈ»ºó»ñÈ¡ScoreDoc£¨ÀïÃæ²ÎÊý´«ÈëqueryµÄ²éÑ¯¹Ø¼ü´Ê£¬£©  
+//					 //ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½ï¿½ï¿½Queryï¿½Ð£ï¿½ï¿½ï¿½textï¿½Ç½ï¿½Òªï¿½ï¿½Ñ¯ï¿½Ä¹Ø¼ï¿½ï¿½Ê¡ï¿½ï¿½ï¿½
+				  Query query = parser.parse("ï¿½ï¿½");
+				  //ï¿½ï¿½ï¿½ï¿½Searcherï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½TopDocsÈ»ï¿½ï¿½ï¿½È¡ScoreDocï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½queryï¿½Ä²ï¿½Ñ¯ï¿½Ø¼ï¿½ï¿½Ê£ï¿½ï¿½ï¿½  
 		          ScoreDoc[] hits = isearcher.search(query, null, 1000).scoreDocs;			 
-				  //Ñ­»·È¡³öSearcherÊý×éÖÐµÄÖµ£¬£¨¼°Ê±²éÑ¯³öÀ´µÄ½á¹û¡££©
+				  //Ñ­ï¿½ï¿½È¡ï¿½ï¿½Searcherï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				  for (int i = 0; i < hits.length; i++) {
-					    //¸ù¾ÝScoreDoc»ñÈ¡¾ßÌåDocument¶ÔÏó²¢µÃµ½ËùÐèÒªµÄÖµ  
+					    //ï¿½ï¿½ï¿½ï¿½ScoreDocï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Documentï¿½ï¿½ï¿½ó²¢µÃµï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Öµ  
 		                Document hitDoc = isearcher.doc(hits[i].doc);
-		             System.out.println("²éÑ¯³öÀ´µÄÖµÊÇ:  "+hitDoc.get("bookname"));
+		             System.out.println("ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½:  "+hitDoc.get("bookname"));
 		            }
 	        }catch(Exception e){  
 	            System.out.println(e.getStackTrace());  
