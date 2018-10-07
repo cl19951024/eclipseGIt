@@ -162,4 +162,8 @@ public class LuceneTest {
 		
 		
 	}
+	public void add(){
+	  int i=10;
+	}
+	
 }
