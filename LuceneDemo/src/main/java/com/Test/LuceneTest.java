@@ -147,12 +147,14 @@ public class LuceneTest {
 				  Query query = parser.parse("��");
 				  //����Searcher��������TopDocsȻ���ȡScoreDoc�������������query�Ĳ�ѯ�ؼ��ʣ���  
 		          ScoreDoc[] hits = isearcher.search(query, null, 1000).scoreDocs;			 
-				  //ѭ��ȡ��Searcher�����е�ֵ������ʱ��ѯ�����Ľ������
+				if(hits!=null){
+				
 				  for (int i = 0; i < hits.length; i++) {
 					    //����ScoreDoc��ȡ����Document���󲢵õ�����Ҫ��ֵ  
 		                Document hitDoc = isearcher.doc(hits[i].doc);
 		             System.out.println("��ѯ������ֵ��:  "+hitDoc.get("bookname"));
 		            }
+				}
 	        }catch(Exception e){  
 	            System.out.println(e.getStackTrace());  
 	        }  
