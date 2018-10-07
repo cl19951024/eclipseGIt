@@ -147,6 +147,7 @@ public class LuceneTest {
 				  Query query = parser.parse("��");
 				  //����Searcher��������TopDocsȻ���ȡScoreDoc�������������query�Ĳ�ѯ�ؼ��ʣ���  
 		          ScoreDoc[] hits = isearcher.search(query, null, 1000).scoreDocs;			 
+		          System.out.println("12345");
 				  //ѭ��ȡ��Searcher�����е�ֵ������ʱ��ѯ�����Ľ������
 				  for (int i = 0; i < hits.length; i++) {
 					    //����ScoreDoc��ȡ����Document���󲢵õ�����Ҫ��ֵ  
