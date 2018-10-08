@@ -73,9 +73,7 @@ public class LuceneDemo {
 	        }  
 	
 	}
-public void add(){
- int i=50; 
-}
+
 
 public void delete(){
 	 int i=10;
