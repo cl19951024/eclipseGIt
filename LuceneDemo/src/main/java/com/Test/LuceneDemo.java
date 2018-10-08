@@ -73,7 +73,8 @@ public class LuceneDemo {
 	        }  
 	
 	}
-
-	
+public void add(){
+ int i-10;
+}
 
 }
