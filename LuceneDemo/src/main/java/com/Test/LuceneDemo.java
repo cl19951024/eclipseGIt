@@ -68,14 +68,11 @@ public class LuceneDemo {
 		             System.out.println("��ѯ������ֵ��:  "+hitDoc.get("bookname"));
 		            }
 		
-	        }catch(Exception e){  
+	        }catch(Exception e){   
 	            System.out.println(e.getStackTrace());  
 	        }  
 	
 	}
-public void add(){
- int i=40; 
-}
 
 public void delete(){
 	 int i=10;
