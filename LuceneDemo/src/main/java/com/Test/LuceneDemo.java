@@ -62,12 +62,12 @@ public class LuceneDemo {
 				  QueryParser parser = new QueryParser(Version.LUCENE_CURRENT, "bookname", analyzer);
 				  Query query = parser.parse("��");
 		          ScoreDoc[] hits = isearcher.search(query, null, 1000).scoreDocs;		
-			   if(hits!=null){
+		
 				  for (int i = 0; i < hits.length; i++) {
 		                Document hitDoc = isearcher.doc(hits[i].doc);
 		             System.out.println("��ѯ������ֵ��:  "+hitDoc.get("bookname"));
 		            }
-			   }
+		
 	        }catch(Exception e){  
 	            System.out.println(e.getStackTrace());  
 	        }  
