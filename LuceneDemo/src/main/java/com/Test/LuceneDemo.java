@@ -74,7 +74,7 @@ public class LuceneDemo {
 	
 	}
 public void add(){
- int i=30; 
+ int i=50;
 }
 
 public void delete(){
