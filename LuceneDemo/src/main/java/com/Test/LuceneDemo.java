@@ -78,7 +78,8 @@ public void del(){
   int i=10;
 }
 public void add(){
-  int i=10;
+  int i=1000;
+
 }
 
 }
