@@ -37,12 +37,11 @@ public class LuceneTest {
 	
 	public static void main(String[] args) {
 
-	        try{  
+	        try{
 	        	Directory directory=FSDirectory.open(new File("D:\\index5444"));
 	              IndexWriterConfig config=new IndexWriterConfig(Version.LUCENE_CURRENT,new StandardAnalyzer());
 	            		  IndexWriter writer = new IndexWriter(directory,config);
 	              
-	            //����8���ĵ�  
 	            Document doc1 = new Document();  
 	            Document doc2 = new Document();  
 	            Document doc3 = new Document();  
