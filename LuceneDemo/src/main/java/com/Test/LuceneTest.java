@@ -84,6 +84,6 @@ public class LuceneTest {
 	}
 
 	public void del(){
-		System.out.println("删除");
+		System.out.println("删除" );
 	}
 }
