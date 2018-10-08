@@ -77,4 +77,8 @@ public void add(){
  int i=10;
 }
 
+public void delete(){
+	 int i=10;
+	}
+
 }
